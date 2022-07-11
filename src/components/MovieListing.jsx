@@ -1,8 +1,11 @@
 import React from 'react'
+import MovieItem from './MovieItem'
 
 const MovieListing = () => {
     return (
-        <div>MovieListing</div>
+        <div>
+
+        </div>
     )
 }
 
