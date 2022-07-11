@@ -6,7 +6,7 @@ import ReactRouter from './ReactRouter';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App scroll-smooth">
       <Router>
         <Header/>
         <ReactRouter />

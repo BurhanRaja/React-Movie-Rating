@@ -18,8 +18,8 @@ const Header = () => {
                     </a>
                 </div>
                 <ul className="navItem-container flex flex-row justify-center mx-3 font-semibold font-sans text-sm text-white">
-                    {navItems.map((item) => {
-                        return <li className={item.liClass}><a className={item.aClass} href={item.href}>{item.name}</a></li>
+                    {navItems.map((item, index) => {
+                        return <li key={index} className={item.liClass}><a className={item.aClass} href={item.href}>{item.name}</a></li>
                     })}
                 </ul>
                 <div className="all-btns flex justify-end flex-1">
