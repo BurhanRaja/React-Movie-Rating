@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieListing from '../MovieListing'
+import MovieListing from '../CardSlider'
 import LandingTitle from './LandingTitle'
 
 
