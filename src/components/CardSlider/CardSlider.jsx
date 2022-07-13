@@ -1,31 +1,26 @@
 import React from 'react'
 import CardItem from './CardItem'
 import "react-multi-carousel/lib/styles.css";
-import '../css/CardSlider.css';
+import '../../css/CardSlider.css';
 
-const listingCategories = [
-    { name: "Streaming" },
-    { name: "Movies" },
-    { name: "TV Shows"},
-    { name: "In Theaters"},
-]
 
 const slides = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const CardSlider = () => {
+const CardSlider = ({cardtitle, tabNames}) => {
+    
     return (
         <>
-            <div className="popular-list flex font-sans m-7 p-2 align-middle items-center">
+            <div className="popular-list flex font-sans m-7 p-2 justify-space items-center">
                 <div className="popular-title font-medium text-2xl">
-                    <p>What's Popular</p>
+                    <p>{cardtitle}</p>
                 </div>
                 <nav className=''>
-                    <ul className='flex flex-row align-middle mx-3'>
-                        {listingCategories.map((item, index) => {
-                            return <div><li key={index} className="tab-item mx-2 px-2 cursor-pointer text-sm">{item.name}</li>
-                            
-                            </div>
-                        })}
+                    <ul className='flex flex-row align-middle mx-3 items-center'>
+                            <li className="tab-item mx-2 px-2 cursor-pointer text-sm">Streaming</li>
+                            <li className="tab-item mx-2 px-2 cursor-pointer text-sm">Streaming</li>
+                            <li className="tab-item mx-2 px-2 cursor-pointer text-sm">Streaming</li>
+                            <li className="tab-item mx-2 px-2 cursor-pointer text-sm">Streaming</li>
+                        
                     </ul>
                 </nav>
             </div>
