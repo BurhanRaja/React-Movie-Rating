@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SeriesListing = () => {
+const TrailerSlider = () => {
     return (
         <div>
-
+            
         </div>
     )
 }
 
-export default SeriesListing
+export default TrailerSlider

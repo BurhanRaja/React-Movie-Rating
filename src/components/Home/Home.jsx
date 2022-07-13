@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieListing from '../CardSlider'
+import CardSlider from '../CardSlider'
 import LandingTitle from './LandingTitle'
 
 
@@ -7,7 +7,8 @@ const Home = () => {
     return (
         <div>
             <LandingTitle/>
-            <MovieListing />
+            <CardSlider />
+            <CardSlider />
         </div>
     )
 }
