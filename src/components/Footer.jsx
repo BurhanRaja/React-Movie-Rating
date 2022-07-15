@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div>
-            <div className="all-lists flex flex-row p-7 pb-16 justify-center text-white" style={{ "background-color": "rgb(3, 30, 64)" }}>
+            <div className="all-lists flex flex-row p-7 pb-16 justify-center text-white" style={{ "backgroundColor": "rgb(3, 30, 64)" }}>
                 <div className="logo">
                     <img src="/assets/logo2.svg" alt="TMDB Logo" className='w-32 h-32 mx-12' />
                     <button className='bg-indigo-900 p-3 m-2 rounded-lg hover:bg-violet-800'>Login</button>

@@ -1,6 +1,6 @@
 import React from 'react'
 import TrailerItem from './TrailerItem'
-import "react-multi-carousel/lib/styles.css";
+import "../../css/TrailerSlider.css";
 
 
 const slides = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

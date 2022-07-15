@@ -1,0 +1,7 @@
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider {
+    scrollbar-width: none;
+}
