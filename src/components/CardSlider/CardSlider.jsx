@@ -2,15 +2,16 @@ import React from 'react'
 import CardItem from './CardItem'
 import "react-multi-carousel/lib/styles.css";
 import '../../css/CardSlider.css';
+import { ChevronRightIcon } from '@heroicons/react/outline';
 
 
 const slides = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const CardSlider = ({cardtitle, tabNames}) => {
+const CardSlider = ({cardtitle}) => {
     
     return (
         <>
-            <div className="popular-list flex font-sans m-7 p-2 justify-space items-center">
+            <div className="popular-list flex flex-start font-sans m-7 p-2 items-center">
                 <div className="popular-title font-medium text-2xl">
                     <p>{cardtitle}</p>
                 </div>
@@ -23,6 +24,9 @@ const CardSlider = ({cardtitle, tabNames}) => {
                         
                     </ul>
                 </nav>
+                    <div className="flex items-center ml-10 text-sm font-semibold">
+                        <button>More</button><ChevronRightIcon className='w-5 h-5' />
+                    </div>
             </div>
 
             <div className="slider-container flex justify-start items-center">
@@ -30,7 +34,9 @@ const CardSlider = ({cardtitle, tabNames}) => {
                     {slides.map((slide, index) => {
                         return <CardItem key={index} />
                     })}
+                    
                 </div>
+                
             </div>
 
 

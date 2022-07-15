@@ -2,10 +2,9 @@ import React from 'react'
 import { BellIcon, PlusIcon, SearchIcon } from '@heroicons/react/outline'
 
 const navItems = [
-    {name: "Movies", href:"#", aClass:"hover:text-white", liClass:"nav-item mx-2 p-2 focus:outline-none focus:ring focus:bg-indigo-900 rounded"},
-    {name: "TV Shows", href:"/", aClass:"hover:text-white", liClass:"nav-item mx-2 p-2 focus:outline-none focus:ring focus:bg-indigo-900 rounded"},
-    {name: "People", href:"/", aClass:"hover:text-white", liClass:"nav-item mx-2 p-2 focus:outline-none focus:ring focus:bg-indigo-900 rounded"},
-    {name: "More", href:"/", aClass:"hover:text-white", liClass:"nav-item mx-2 p-2 focus:outline-none focus:ring focus:bg-indigo-900 rounded"},
+    {name: "Movies", href:"/"},
+    {name: "TV Shows", href:"/"},
+    {name: "People", href:"/"},
 ]
 
 const Header = () => {
@@ -19,7 +18,7 @@ const Header = () => {
                 </div>
                 <ul className="navItem-container flex flex-row justify-center mx-3 font-semibold font-sans text-sm text-white">
                     {navItems.map((item, index) => {
-                        return <li key={index} className={item.liClass}><a className={item.aClass} href={item.href}>{item.name}</a></li>
+                        return <li key={index} className="nav-item mx-2 p-2 focus:outline-none focus:ring focus:bg-indigo-900 rounded"><a className="hover:text-white" href={item.href}>{item.name}</a></li>
                     })}
                 </ul>
                 <div className="all-btns flex justify-end flex-1">

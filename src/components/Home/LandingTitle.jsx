@@ -5,7 +5,7 @@ const LandingTitle = () => {
         <div>
             <div className="main-container bg-gradient-to-r from-sky-900 to-sky-600">
                 <div className="landing-container flex flex-col px-8 py-12 font-sans">
-                    <div className="welcome flex flex-row mx-4 mt-4 mb-2 text-white">
+                    <div className="welcome flex flex-row mx-6 mt-4 mb-2 text-white">
                         <p className='text-5xl font-extrabold '>Welcome.</p>
                     </div>
                     <div className="welcome2 text-3xl flex flex-row mb-4 text-white" style={{ "marginLeft": "2vw" }}>
