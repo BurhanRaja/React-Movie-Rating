@@ -1,36 +1,28 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import CardItem from './CardItem'
 import "react-multi-carousel/lib/styles.css";
 import '../../css/CardSlider.css';
 import { ChevronRightIcon } from '@heroicons/react/outline';
 
+import { getPopularMovies } from '../../features/movies/popularMovie';
+import { useSelector } from 'react-redux/es/exports';
+
 
 const slides = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const CardSlider = ({cardtitle}) => {
+    
+    const allDatamovies = useSelector(getPopularMovies)
+    console.log(allDatamovies)
+    console.log(allDatamovies.results)
+    let renderPopularMovies = null
 
-    const [movies, setMovies] = useState([])
-
-    const host = process.env.REACT_APP_MOVIE_URL
-    const api_key = process.env.REACT_APP_MOVIE_NOT_API_KEY
-    const urlType = "/trending/all/day"
-
-    const fetchData = async () => {
-        const response = await fetch(`${host}/${urlType}?api_key=${api_key}&page=1`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-
-        const jsonData = await response.json()
-        console.log(jsonData.results)
-        setMovies(jsonData.results)
+    if (allDatamovies.results != 0) {
+        // const movies = allDatamovies.popularMovies.results
+        slides.map((movie, index) => {
+            return <CardItem key={index} poster={movie.poster_path} />
+        })
     }
-    useEffect(() => {
-        fetchData()
-
-    }, [])
     
     return (
         <>
@@ -52,10 +44,7 @@ const CardSlider = ({cardtitle}) => {
 
             <div className="slider-container flex justify-start items-center">
                 <div className="slider whitespace-nowrap overflow-x-scroll p-2 scroll-smooth ml-3 z-10">
-                    {movies.map((movie, index) => {
-                        return <CardItem key={index} poster={movie.poster_path} />
-                    })}
-                    
+                    {renderPopularMovies}
                 </div>
                 
             </div>
