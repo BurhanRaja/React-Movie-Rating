@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import popularMovieReducer from "../features/movies/popularMovie"
+import popularMovieReducer from "../features/movies/popularAll"
 
 const store = configureStore({
     reducer:{
