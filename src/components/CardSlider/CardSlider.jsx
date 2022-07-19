@@ -39,14 +39,14 @@ const CardSlider = ({ cardtitle, movies, tvShows }) => {
                     <TabPanel value="1" style={{"padding":"20px 0px 0px 0px"}}>
                     <div className="slider whitespace-nowrap overflow-x-scroll py-2 scroll-smooth">
                         {movies !== undefined && movies.map((movie, index) => {
-                            return <CardItem key={index} poster={movie.poster_path} />
+                            return <CardItem key={index} poster={movie.poster_path} pathDetail={`movie/${movie.id}`} />
                         })}
                     </div> 
                     </TabPanel>
                     <TabPanel value="2" style={{"padding":"20px 0px 0px 0px"}}>
                     <div className="slider whitespace-nowrap overflow-x-scroll py-2 scroll-smooth">
                         {tvShows !== undefined && tvShows.map((tvShow, index) => {
-                            return <CardItem key={index} poster={tvShow.poster_path} />
+                            return <CardItem key={index} poster={tvShow.poster_path} pathDetail={`tv/${tvShow.id}`} />
                         })}
                     </div>
                     </TabPanel>

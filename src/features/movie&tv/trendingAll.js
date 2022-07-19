@@ -36,16 +36,16 @@ const initialState = {
 }
 
 const TrendingAllSlice = createSlice({
-    name: "Top Rated Movie and TV Show",
+    name: "Trending Movie and TV Show",
     initialState,
     reducers: {},
     extraReducers: {
         [fetchTrendingMovies.fulfilled]: (state, {payload}) => {
-            console.log("Popular Movies Fulfilled")
+            console.log("Trending Movies Fulfilled")
             return {...state, trendingMovies: payload}
         },
         [fetchTrendingTVShows.fulfilled]: (state, {payload}) => {
-            console.log("Popular TV Shows Fulfilled")
+            console.log("Trending TV Shows Fulfilled")
             return {...state, trendingTVShows: payload}
         },
     }
