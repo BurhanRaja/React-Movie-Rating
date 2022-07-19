@@ -1,14 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import popularAllSlice from "../features/movie&tv/popularAll"
 import topRatedAllSlice from "../features/movie&tv/topRatedAll"
+import trendingAllSlice from "../features/movie&tv/trendingAll"
 
 const store = configureStore({
     reducer:{
-        popularMovies: popularAllSlice,
-        popularTVShows: popularAllSlice,
+        popularMovieAndTV: popularAllSlice,
 
-        topRatedMovies: topRatedAllSlice,
-        topRatedTVShows: topRatedAllSlice
+        topRatedMovieAndTV: topRatedAllSlice,
+
+        trendingMovieAndTV: trendingAllSlice,
     }
 })
 
