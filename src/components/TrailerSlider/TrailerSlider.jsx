@@ -17,7 +17,6 @@ const TrailerSlider = ({ cardtitle, movies, tvShows }) => {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     }
-    // "https://www.youtube.com/watch?v="
 
 
     return (
@@ -41,14 +40,14 @@ const TrailerSlider = ({ cardtitle, movies, tvShows }) => {
                     <TabPanel value="1" style={{ "padding": "20px 0px 0px 0px" }}>
                         <div className="slider whitespace-nowrap overflow-x-scroll py-2 scroll-smooth">
                             {movies !== undefined && movies.map((movie, index) => {
-                                return <TrailerItem key={index} poster={movie.poster_path} pathDetail={movie.id} trailerName={movie.original_title}/>
+                                return <TrailerItem key={index} poster={movie.poster_path} pathDetail={movie.id} trailerName={movie.title} trailerId={movie.id} mediaType="/movie"/>
                             })}
                         </div>
                     </TabPanel>
                     <TabPanel value="2" style={{ "padding": "20px 0px 0px 0px" }}>
                         <div className="slider whitespace-nowrap overflow-x-scroll py-2 scroll-smooth">
                             {tvShows !== undefined && tvShows.map((tvShow, index) => {
-                                return <TrailerItem key={index} poster={tvShow.poster_path} pathDetail={`tv/${tvShow.id}`} trailerName={tvShow.original_title}/>
+                                return <TrailerItem key={index} poster={tvShow.poster_path} pathDetail={`tv/${tvShow.id}`} trailerName={tvShow.name} trailerId={tvShow.id} mediaType="/tv"/>
                             })}
                         </div>
                     </TabPanel>
