@@ -6,7 +6,7 @@ async () => {
     const host = process.env.REACT_APP_MOVIE_URL
     const api_key = process.env.REACT_APP_MOVIE_NOT_API_KEY
     const urlType = "movie/popular"
-    const response = await fetch(`${host}/${urlType}?api_key=${api_key}&page=1`, {
+    const response = await fetch(`${host}/${urlType}?api_key=${api_key}&page=1&region=IN`, {
         method: 'GET',
         headers: {
             'Content-Type': "application/json"

@@ -9,7 +9,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
-const CardSlider = ({ cardtitle, popularmovies, populartvShows }) => {
+const CardSlider = ({ cardtitle, movies, tvShows }) => {
     const [value, setValue] = useState('1');
 
     const handleChange = (event, newValue) => {
@@ -38,31 +38,20 @@ const CardSlider = ({ cardtitle, popularmovies, populartvShows }) => {
                     </Box>
                     <TabPanel value="1" style={{"padding":"20px 0px 0px 0px"}}>
                     <div className="slider whitespace-nowrap overflow-x-scroll py-2 scroll-smooth">
-                        {popularmovies !== undefined && popularmovies.map((movie, index) => {
+                        {movies !== undefined && movies.map((movie, index) => {
                             return <CardItem key={index} poster={movie.poster_path} />
                         })}
                     </div> 
                     </TabPanel>
                     <TabPanel value="2" style={{"padding":"20px 0px 0px 0px"}}>
                     <div className="slider whitespace-nowrap overflow-x-scroll py-2 scroll-smooth">
-                        {populartvShows !== undefined && populartvShows.map((movie, index) => {
-                            return <CardItem key={index} poster={movie.poster_path} />
+                        {tvShows !== undefined && tvShows.map((tvShow, index) => {
+                            return <CardItem key={index} poster={tvShow.poster_path} />
                         })}
                     </div>
                     </TabPanel>
                 </TabContext>
             </Box>
-
-            <div className="slider-container flex justify-start items-center">
-                {/* <div className="slider whitespace-nowrap overflow-x-scroll p-2 scroll-smooth ml-3 z-10">
-                        {popularArray !== undefined && popularArray.map((movie, index) => {
-                            return <CardItem key={index} poster={movie.poster_path} />
-                        })}
-                    </div> */}
-
-            </div>
-
-
         </ >
     )
 }
