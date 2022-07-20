@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
 import CardSlider from '../CardSlider/CardSlider'
 import JoinSection from '../JoinSection'
-import TrailerSlider from '../TrailerSlider/TrailerSlider'
 import LandingTitle from './LandingTitle'
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchPopularMovies, fetchPopularTVShows } from '../../features/movie&tv/popularAll';
@@ -55,11 +54,11 @@ const Home = () => {
         <div>
             <LandingTitle />
             <CardSlider key={1} cardtitle="What's Popular" movies={popularMovies} tvShows={popularTVShows} />
-            <CardSlider key={2} cardtitle="Top Rated" movies={topRatedMovies} tvShows={topRatedTVShows} />
-
-            <TrailerSlider cardtitle="Latest Trailer" movies={nowPlayingMovies} tvShows={nowPlayingTVShows}/>
-
             <CardSlider key={3} cardtitle="Trending" movies={trendingMovies} tvShows={trendingTVShows}/>
+
+            <CardSlider cardtitle="Streaming" movies={nowPlayingMovies} tvShows={nowPlayingTVShows}/>
+
+            <CardSlider key={2} cardtitle="Top Rated" movies={topRatedMovies} tvShows={topRatedTVShows} />
             <JoinSection />
         </div>
     )
